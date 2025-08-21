@@ -12,7 +12,7 @@ while True:
 
     data.append([name, roll, maths, science, english, attendance])
 
-    cont = input("Do you want to add another student? (y/n): ")
+    cont = input("Do you want to add another student? (yes/no): ")
     if cont.lower() != 'y':
         break
 
