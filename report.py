@@ -13,7 +13,7 @@ df.columns = df.columns.str.strip()
 if "Name" in df.columns:
     df["Name"] = df["Name"].astype(str).str.strip()
 
-print("📊 Student Report Summary")
+print(" Student Report Summary")
 print("=" * 40)
 
 print("\nSubject-wise Average Marks:")
@@ -52,7 +52,7 @@ plt.legend()
 plt.show()
 
     
-print("📊 Student Report Summary")
+print(" Student Report Summary")
 print("="*40)
 
 print("\nSubject-wise Average Marks:")
@@ -87,6 +87,7 @@ plt.xlabel("Students")
 plt.ylabel("Marks")
 plt.legend()
 plt.show()
+
 
 
 
