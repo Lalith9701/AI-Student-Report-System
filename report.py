@@ -1,7 +1,9 @@
+
 import pandas as pd
 import matplotlib.pyplot as plt
 
-df = pd.read_csv(r"C:\Users\lalit\OneDrive\Desktop\student report system\student_report_system\student_data.csv")
+df = pd.read_csv("student_data.csv")
+
     
 print("📊 Student Report Summary")
 print("="*40)
