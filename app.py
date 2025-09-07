@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, send_from_directory, redirect, url_for
+from flask import Flask, render_template, request, send_from_directory
 import os
 from ml_models.analysis import analyze_data
 
@@ -30,13 +30,22 @@ def upload():
         except Exception as e:
             return f"Error analyzing file: {e}", 500
 
-        return render_template("dashboard.html", results=results, processed_filename=processed_filename)
+        return render_template(
+            "dashboard.html",
+            results=results,
+            processed_filename=processed_filename
+        )
     return render_template("index.html")
 
 # Download processed file
 @app.route('/download/<processed_filename>')
 def download_file(processed_filename):
-    return send_from_directory(app.config['UPLOAD_FOLDER'], processed_filename, as_attachment=True)
+    return send_from_directory(
+        app.config['UPLOAD_FOLDER'],
+        processed_filename,
+        as_attachment=True
+    )
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    # For local dev only
+    app.run(host="0.0.0.0", port=5000)
