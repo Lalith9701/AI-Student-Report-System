@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Report</title>
+<link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.0/dist/darkly/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-dark text-light">
+<div class="container mt-5">
+  <div class="card shadow-lg p-4 bg-secondary text-light rounded-4">
+    <h2 class="text-center mb-4">📊 Student Performance Report</h2>
+    <table class="table table-dark table-hover table-bordered text-center align-middle">
+      <thead>
+        <tr>
+          {% for col in results[0].keys() %}
+            <th>{{ col | capitalize }}</th>
+          {% endfor %}
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in results %}
+        <tr>
+          {% for val in row.values() %}
+            <td>{{ val }}</td>
+          {% endfor %}
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <div class="text-center mt-3">
+      <a href="{{ url_for('upload') }}" class="btn btn-success">⬅️ Upload Another File</a>
+      <a href="{{ url_for('welcome') }}" class="btn btn-secondary">🏠 Home</a>
+    </div>
+  </div>
+</div>
+</body>
+</html>

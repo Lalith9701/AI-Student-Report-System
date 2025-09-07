@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Student Data</title>
+    <!-- Bootstrap Darkly Theme -->
+    <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.0/dist/darkly/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-dark text-light">
+
+<div class="container mt-5">
+    <div class="card shadow-lg p-4 bg-secondary text-light rounded-4">
+        <h2 class="text-center mb-4">📂 Upload Student CSV File</h2>
+
+        <form action="{{ url_for('upload') }}" method="post" enctype="multipart/form-data" class="text-center">
+            <div class="mb-3">
+                <input type="file" class="form-control bg-dark text-light border-light" name="file" required>
+            </div>
+            <button type="submit" class="btn btn-primary px-4 py-2">🚀 Upload & Analyze</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
