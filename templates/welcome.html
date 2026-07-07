@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome | Student Report System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.0/dist/darkly/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { min-height: 100vh; display: flex; justify-content: center; align-items: center; }
+        .card { padding: 3rem; border-radius: 1rem; text-align: center; }
+        .btn-lg { font-size: 1.5rem; transition: transform 0.2s; }
+        .btn-lg:hover { transform: scale(1.1); }
+    </style>
+</head>
+<body class="bg-dark text-light">
+    <div class="card bg-secondary shadow-lg">
+        <h1>🎓 Welcome to Student Report System</h1>
+        <p class="mt-3">Upload student marks and view dashboard with charts and leaderboard!</p>
+        <a href="{{ url_for('upload') }}" class="btn btn-primary btn-lg mt-4">📂 Upload CSV</a>
+    </div>
+</body>
+</html>
